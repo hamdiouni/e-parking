@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="223.0" prefWidth="255.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.UserController">
+   <children>
+      <ImageView fitHeight="108.0" fitWidth="116.0" layoutX="107.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="client" layoutX="18.0" layoutY="102.0" prefHeight="18.0" prefWidth="106.0" text="Label" textFill="#2b2a2a" />
+      <Label fx:id="etat" layoutX="18.0" layoutY="154.0" prefHeight="18.0" prefWidth="106.0" text="Label" textFill="#282626" />
+      <Label fx:id="sujet" layoutX="18.0" layoutY="128.0" prefHeight="18.0" prefWidth="143.0" text="Label" textFill="#181818" />
+   </children>
+</AnchorPane>
