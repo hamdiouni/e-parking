@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Firas/Desktop/PIDEV/src/services/VehiculeService.java</file>
+            <file>file:/C:/Users/Firas/Desktop/PIDEV/src/entities/Vehicule.java</file>
+            <file>file:/C:/Users/Firas/Desktop/PIDEV/src/gui/vehicule.fxml</file>
+            <file>file:/C:/Users/Firas/Desktop/PIDEV/src/gui/ajoutervehicule.fxml</file>
+            <file>file:/C:/Users/Firas/Desktop/PIDEV/src/gui/ajouter.java</file>
+            <file>file:/C:/Users/Firas/Desktop/PIDEV/src/gui/AjoutervehiculeController.java</file>
+            <file>file:/C:/Users/Firas/Desktop/PIDEV/src/gui/AffichervehiculeController.java</file>
+            <file>file:/C:/Users/Firas/Desktop/PIDEV/src/gui/VehiculeController.java</file>
+            <file>file:/C:/Users/Firas/Desktop/PIDEV/src/services/IService.java</file>
+            <file>file:/C:/Users/Firas/Desktop/PIDEV/src/test/Test.java</file>
+            <file>file:/C:/Users/Firas/Desktop/PIDEV/src/utils/MyDB.java</file>
+            <file>file:/C:/Users/Firas/Desktop/PIDEV/src/services/CategorieService.java</file>
+            <file>file:/C:/Users/Firas/Desktop/PIDEV/src/gui/affichervehicule.fxml</file>
+            <file>file:/C:/Users/Firas/Desktop/PIDEV/src/entities/Categorie.java</file>
+        </group>
+    </open-files>
+</project-private>
