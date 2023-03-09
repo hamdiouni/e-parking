@@ -5,14 +5,9 @@
  */
 package gui;
 
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.image.ImageObserver;
-import java.awt.image.ImageProducer;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,10 +15,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
@@ -31,7 +24,7 @@ import javafx.stage.Stage;
  *
  * @author 21621
  */
-public class HomeController implements Initializable {
+public class clientController implements Initializable {
 
     @FXML
     private AnchorPane ap;
@@ -41,16 +34,12 @@ public class HomeController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       
-    }
-
-  
-
-
+        // TODO
+    }    
 
     @FXML
-    private void gestionuser(MouseEvent event) throws IOException {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("ajouter.fxml"));
+    private void ajoutercompte(MouseEvent event) throws IOException {
+         FXMLLoader loader = new FXMLLoader(getClass().getResource("ajouter.fxml"));
         Parent root = loader.load();
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
@@ -58,12 +47,12 @@ public class HomeController implements Initializable {
     }
 
     @FXML
-    private void gestionplace(MouseEvent event) {
+    private void reserver(MouseEvent event) {
     }
 
     @FXML
-    private void gestionvehicule(MouseEvent event) throws IOException {
-         FXMLLoader loader = new FXMLLoader(getClass().getResource("affichervehicule.fxml"));
+    private void ajoutervehicule(MouseEvent event) throws IOException {
+         FXMLLoader loader = new FXMLLoader(getClass().getResource("ajoutervehicule.fxml"));
         Parent root = loader.load();
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
@@ -71,8 +60,8 @@ public class HomeController implements Initializable {
     }
 
     @FXML
-    private void gestionnote(MouseEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("afficher2.fxml"));
+    private void ajouternote(MouseEvent event) throws IOException {
+         FXMLLoader loader = new FXMLLoader(getClass().getResource("ajouterN.fxml"));
         Parent root = loader.load();
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
@@ -80,13 +69,21 @@ public class HomeController implements Initializable {
     }
 
     @FXML
-    private void gestionposte(MouseEvent event) {
+    private void ajouterreclamation(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ajouterR.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     @FXML
-   private void deconnexion(MouseEvent event) throws IOException {
-    // Fermer l'interface Home
-    Node source = (Node) event.getSource();
+    private void ajouterposte(MouseEvent event) {
+    }
+
+    @FXML
+    private void deconnexion(MouseEvent event) throws IOException {
+        Node source = (Node) event.getSource();
     Stage stage = (Stage) source.getScene().getWindow();
     stage.close();
 
@@ -96,20 +93,11 @@ public class HomeController implements Initializable {
     Stage loginStage = new Stage();
     loginStage.setScene(new Scene(root));
     loginStage.show();
-}
-
-    @FXML
-    private void categorie(MouseEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("categorie.fxml"));
-        Parent root = loader.load();
-        Stage stage = new Stage();
-        stage.setScene(new Scene(root));
-        stage.show();
     }
 
     @FXML
-    private void quitter(MouseEvent event) {
-                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    private void handleQuitter(MouseEvent event) { 
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.close(); 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information");
@@ -117,19 +105,5 @@ public class HomeController implements Initializable {
         alert.setContentText("au revoir.");
         alert.showAndWait();
     }
-
-    @FXML
-    private void abonnement(MouseEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("ajouter1.fxml"));
-        Parent root = loader.load();
-        Stage stage = new Stage();
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
-
     
-
-
 }
-
-

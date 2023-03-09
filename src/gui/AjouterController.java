@@ -182,15 +182,6 @@ public class AjouterController implements Initializable {
         alert.showAndWait();
     }
 
-    @FXML
-    private void abonnement(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("ajouter1.fxml"));
-        Parent root = loader.load();
-        ;
-        Stage stage = new Stage();
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
-       
+
     
 }

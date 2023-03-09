@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="178.0" prefWidth="242.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CategorieController">
+   <children>
+      <TextField fx:id="categorietf" layoutX="14.0" layoutY="31.0" promptText="categorie" />
+      <Button layoutY="97.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="26.0" prefWidth="88.0" text="ajouter" />
+      <Button layoutX="121.0" layoutY="97.0" mnemonicParsing="false" onAction="#afficher" prefHeight="26.0" prefWidth="95.0" text="afficher" />
+   </children>
+</AnchorPane>

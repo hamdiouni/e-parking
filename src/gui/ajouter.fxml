@@ -22,6 +22,5 @@
       <Button layoutX="452.0" layoutY="353.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer" />
       <TextField fx:id="idtf" layoutX="251.0" layoutY="279.0" promptText="id" />
       <Button layoutX="112.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleQuitter" text="quitter" />
-      <Button layoutX="205.0" layoutY="340.0" mnemonicParsing="false" onAction="#abonnement" text="abonnement" />
    </children>
 </AnchorPane>

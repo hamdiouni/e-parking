@@ -37,7 +37,7 @@ public class Main extends Application {
         primaryStage.show();
 
         // Créer une nouvelle Timeline
-        timeline = new Timeline(new KeyFrame(Duration.minutes(1), new EventHandler<ActionEvent>() {
+        timeline = new Timeline(new KeyFrame(Duration.minutes(10), new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("L'application se ferme car la souris est inactive.");

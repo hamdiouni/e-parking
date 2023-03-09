@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="192.0" prefWidth="270.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.VehiculeController">
+   <children>
+      <Label fx:id="marque" layoutX="25.0" layoutY="53.0" text="Label" />
+      <Label fx:id="modele" layoutX="25.0" layoutY="87.0" text="Label" />
+      <Label fx:id="couleur" layoutX="21.0" layoutY="127.0" prefHeight="18.0" prefWidth="64.0" text="Label" />
+      <Label fx:id="matricule" layoutX="25.0" layoutY="14.0" text="Label" />
+   </children>
+</AnchorPane>

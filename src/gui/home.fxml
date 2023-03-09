@@ -8,29 +8,49 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.HomeController">
    <left>
-      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #0D1824;" BorderPane.alignment="CENTER">
+      <VBox prefHeight="400.0" prefWidth="128.0" style="-fx-background-color: #0D1824;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onMouseClicked="#gestionuser" prefHeight="82.0" prefWidth="109.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="user" textFill="WHITE">
+            <Button mnemonicParsing="false" onMouseClicked="#gestionuser" prefHeight="73.0" prefWidth="161.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="user" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#gestionplace" prefHeight="82.0" prefWidth="109.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="place" textFill="WHITE">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#abonnement" prefHeight="73.0" prefWidth="161.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="abonnement" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="92.0" mnemonicParsing="false" onMouseClicked="#gestionvehicule" prefHeight="82.0" prefWidth="109.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="vehicule" textFill="WHITE">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#gestionplace" prefHeight="71.0" prefWidth="162.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="place" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#gestionnote" prefHeight="82.0" prefWidth="109.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="note" textFill="WHITE">
+            <Button layoutX="10.0" layoutY="92.0" mnemonicParsing="false" onMouseClicked="#gestionvehicule" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="vehicule" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="257.0" mnemonicParsing="false" onMouseClicked="#gestionposte" prefHeight="82.0" prefWidth="109.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="poste" textFill="WHITE">
+            <Button layoutX="10.0" layoutY="145.0" mnemonicParsing="false" onMouseClicked="#categorie" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="categorie" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#gestionnote" prefHeight="74.0" prefWidth="161.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="note" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#gestionposte" prefHeight="76.0" prefWidth="163.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="poste" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#deconnexion" prefHeight="62.0" prefWidth="164.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="déconnexion" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#quitter" prefHeight="62.0" prefWidth="164.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="quitter" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>

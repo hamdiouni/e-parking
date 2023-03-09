@@ -1,11 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1">
-    
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.proController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="152.0" style="-fx-background-color: #0D1824;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#ajoutercompte" prefHeight="96.0" prefWidth="152.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="ajouter compte" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#ajouterplace" prefHeight="96.0" prefWidth="152.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="ajouter place" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="92.0" mnemonicParsing="false" onMouseClicked="#afficherplace" prefHeight="99.0" prefWidth="152.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="afficher place" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#deconnexion" prefHeight="110.0" prefWidth="152.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="déconnexion" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#quiiter" prefHeight="110.0" prefWidth="152.0" style="-fx-background-color: transparente; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="quitter" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane fx:id="ap" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #14242B;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

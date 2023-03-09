@@ -129,48 +129,6 @@ private void tri(ActionEvent event) throws IOException {
 
 
 
-    public static class PDFGenerator {
-
-    private static final String FILE_NAME = "abonnements.pdf";
-    private static final String FONT = "gui/arial.ttf"; // Chemin vers une police TrueType
-
-    public static void generatePDF(List<abonnement> abonnements) throws IOException {
-
-        PdfWriter writer = new PdfWriter(FILE_NAME);
-        PdfDocument pdf = new PdfDocument(writer);
-        Document document = new Document(pdf, PageSize.A4);
-        PdfFont font = PdfFontFactory.createFont(FONT, "Cp1252", true);
-
-        Table table = new Table(2);
-
-        // En-tête du tableau
-        //table.addCell(new Cell().add("Nom").setFont(font));
-        //table.addCell(new Cell().add("Tarif").setFont(font));
-
-        // Ajout des données des abonnements au tableau
-        for (abonnement abonnement : abonnements) {
-            //table.addCell(new Cell().add(abonnement.getNom()).setFont(font));
-            //table.addCell(new Cell().add(String.valueOf(abonnement.getTarif())).setFont(font));
-        }
-
-        table.setVerticalAlignment(VerticalAlignment.MIDDLE);
-
-        document.add(table);
-        document.close();
-
-        System.out.println("PDF généré avec succès.");
-    }
-}
-
-
-@FXML
-private void handleExportPDF() {
-    try {
-        List<abonnement> abonnements = ps.recuperer();
-        PDFGenerator.generatePDF(abonnements);
-    } catch (IOException | SQLException e) {
-        System.out.println(e.getMessage());
-    }
-}
+    
 }
 

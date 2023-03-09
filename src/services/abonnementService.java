@@ -96,6 +96,8 @@ public List<abonnement> rechercher(abonnement abonnement) throws SQLException {
             while (resultSet.next()) {
                 abonnement ab = new abonnement();
                 ab.setNom(resultSet.getString("nom"));
+                                ab.setTarif(resultSet.getFloat("tarif"));
+
                 abonnements.add(ab);
             }
         }

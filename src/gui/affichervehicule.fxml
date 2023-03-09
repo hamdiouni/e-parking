@@ -8,13 +8,13 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Afficher1Controller">
+<AnchorPane id="AnchorPane" prefHeight="570.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AffichervehiculeController">
    <children>
-      <ScrollPane prefHeight="456.0" prefWidth="633.0">
+      <ScrollPane prefHeight="518.0" prefWidth="736.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="451.0" prefWidth="647.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="654.0" prefWidth="913.0">
                <children>
-                  <GridPane fx:id="grid1" prefHeight="388.0" prefWidth="590.0">
+                  <GridPane fx:id="grid" layoutX="14.0" layoutY="5.0" prefHeight="642.0" prefWidth="870.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -25,12 +25,13 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                   </GridPane>
-                  <Button layoutX="381.0" layoutY="405.0" mnemonicParsing="false" onAction="#rechercher" prefHeight="26.0" prefWidth="157.0" text="rechercher" />
-                  <TextField fx:id="nomtf" layoutX="231.0" layoutY="406.0" promptText="nom" />
-                  <Button layoutX="549.0" layoutY="404.0" mnemonicParsing="false" onAction="#tri" text="tri" />
                </children>
             </AnchorPane>
         </content>
       </ScrollPane>
+      <Button layoutX="55.0" layoutY="522.0" mnemonicParsing="false" onAction="#stat" text="stat" />
+      <TextField fx:id="matricule" layoutX="142.0" layoutY="522.0" promptText="matricule" />
+      <Button layoutX="324.0" layoutY="522.0" mnemonicParsing="false" onAction="#recherche" text="recherche" />
+      <Button layoutX="438.0" layoutY="522.0" mnemonicParsing="false" onAction="#tri" text="tri" />
    </children>
 </AnchorPane>
