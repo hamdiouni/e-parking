@@ -12,9 +12,11 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.awt.AWTException;
+import java.awt.Image;
 import java.awt.MouseInfo;
 import java.awt.Robot;
 import java.io.IOException;
+import java.io.InputStream;
 import javafx.fxml.FXMLLoader;
 
 public class Main extends Application {
@@ -27,8 +29,11 @@ public class Main extends Application {
         // Charger le fichier FXML
         Parent root = FXMLLoader.load(getClass().getResource("../gui/Login.fxml"));
 
+    // Set the icon for the primary stage
         Scene scene = new Scene(root, 600, 400);
         primaryStage.setScene(scene);
+        
+
         primaryStage.show();
 
         // Créer une nouvelle Timeline

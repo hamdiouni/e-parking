@@ -64,7 +64,12 @@ public class HomeController implements Initializable {
     }
 
     @FXML
-    private void gestionnote(MouseEvent event) {
+    private void gestionnote(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ajouterN.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     @FXML
