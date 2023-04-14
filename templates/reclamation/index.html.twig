@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700"/>
+  <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/templatemo-style.css') }}">
+{% endblock %}
+{% block title %}Hello ReclamationController!
+{% endblock %}
+
+{% block body %}
+	{% for message in app.flashes('notice') %}
+		<div class="alert alert-success mt-4 mb-b">
+			{{ message }}
+		</div>
+	{% endfor %}
+	<body>
+		<a  href="{{ path('welcome') }}">
+                  <b>back</b>
+                </a>
+							<h1>Liste des reclamations</h1>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">nom_client</th>
+					<th scope="col">sujet</th>
+					<th scope="col">etat</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for data in list %}
+					<tr>
+						<th scope="row">{{ data.id}}</th>
+						<td>{{ data.getNomClient }}</td>
+						<td>{{ data.sujet}}</td>
+						<td>{{ data.etat}}</td>
+						<td>
+							<a class="btn btn-warning" href="{{ path('update', {'id': data.id}) }}">Update</a>
+
+							<a class="btn btn-warning" href="{{ path('delete', {'id': data.id}) }}">Delete</a>
+														<a class="btn btn-warning" href="{{ path('reclamation_show', {'id': data.id}) }}">afficher</a>
+
+														<a class="btn btn-warning" href="{{ path('reponse_new', {'id': data.id}) }}">repondre</a>
+
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</body>
+</div>{% endblock %}{% block javascripts %}
+{{ parent() }}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>{% endblock %}

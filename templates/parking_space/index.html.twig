@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700"/>
+  <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/templatemo-style.css') }}">
+{% endblock %}
+{% block title %}ParkingSpace index{% endblock %}
+
+{% block body %}
+<a  href="{{ path('welcome') }}">
+                  <b>back</b>
+                </a>
+    <h1>ParkingSpace </h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Id_place</th>
+                <th>Nombre_place</th>
+                <th>Type</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for parking_space in parking_spaces %}
+            <tr>
+                <td>{{ parking_space.id }}</td>
+                <td>{{ parking_space.idPlace }}</td>
+                <td>{{ parking_space.nombrePlace }}</td>
+                <td>{{ parking_space.type }}</td>
+                <td>
+                    <a href="{{ path('app_parking_space_show', {'id': parking_space.id}) }}">show</a>
+                    <a href="{{ path('app_parking_space_edit', {'id': parking_space.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_parking_space_new') }}">Create new</a>
+{% endblock %}

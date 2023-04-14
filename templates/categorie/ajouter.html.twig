@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700"/>
+  <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/templatemo-style.css') }}">
+{% endblock %}
+{% block title %}Ajouter une catégorie{% endblock %}
+
+{% block body %}
+    <h1>Ajouter une catégorie</h1>
+
+				{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+        {{ form_widget(form) }}
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700"/>
+  <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/templatemo-style.css') }}">
+{% endblock %}
+
+{% block body %}
+	
+	<div class="container">
+		<h1 class="mb-4">Créer un nouvel utilisateur</h1>
+		{% for flashMessage in app.session.flashbag.get('error') %}
+			<div class="alert alert-danger">{{ flashMessage }}</div>
+		{% endfor %}
+
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+	<div class="form-group">
+		{{ form_label(form.email) }}
+		{{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+		{% if form.email.vars.errors|length > 0 %}
+			<div class="alert alert-danger">
+				{{ form_errors(form.email) }}
+			</div>
+		{% endif %}
+	</div>
+
+	<div class="form-group">
+		{{ form_label(form.username) }}
+		{{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}
+		{% if form.username.vars.errors|length > 0 %}
+			<div class="alert alert-danger">
+				{{ form_errors(form.username) }}
+			</div>
+		{% endif %}
+	</div>
+
+	<div class="form-group">
+    {{ form_label(form.password.first) }}
+    {{ form_widget(form.password.first, {'attr': {'class': 'form-control'}}) }}
+    {% if form.password.first.vars.errors|length > 0 %}
+        <div class="alert alert-danger">
+            {{ form_errors(form.password.first) }}
+        </div>
+    {% endif %}
+</div>
+
+<div class="form-group">
+    {{ form_label(form.password.second) }}
+    {{ form_widget(form.password.second, {'attr': {'class': 'form-control'}}) }}
+    {% if form.password.second.vars.errors|length > 0 %}
+        <div class="alert alert-danger">
+            {{ form_errors(form.password.second) }}
+        </div>
+    {% endif %}
+</div>
+
+
+	<div class="form-group">
+		{{ form_label(form.userType) }}
+		{{ form_widget(form.userType, {'attr': {'class': 'form-control'}}) }}
+		{% if form.userType.vars.errors|length > 0 %}
+			<div class="alert alert-danger">
+				{{ form_errors(form.userType) }}
+			</div>
+		{% endif %}
+	</div>
+
+	<div class="form-group">
+		{{ form_label(form.photo) }}
+			{{ form_widget(form.photo, {'attr': {'class': 'form-control'}}) }}
+		{% if form.photo.vars.errors|length > 0 %}
+			<div class="alert alert-danger">
+				{{ form_errors(form.photo) }}
+			</div>
+		{% endif %}
+	</div>
+
+	{{ form_label(form.session) }}
+	{{ form_widget(form.session) }}
+	{{ form_errors(form.session) }}
+
+	<button type="submit" class="btn btn-primary">Créer</button>
+{{ form_end(form) }}
+
+			</div>
+		</div>
+	</div>
+{% endblock %}{% block javascripts %}{{ parent() }}<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>{% endblock %}

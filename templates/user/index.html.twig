@@ -1,0 +1,47 @@
+
+			
+{% block stylesheets %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700"/>
+  <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/templatemo-style.css') }}">
+{% endblock %}
+		
+	 {% block body %}
+
+	<body>
+    <a  href="{{ path('welcome') }}">
+                  <b>back</b>
+                </a>
+					<div class="container mt-5">
+			<h1>Liste des utilisateurs</h1>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Username</th>
+						<th>Email</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for user in users %}
+						<tr>
+							<td>{{ user.idUser }}</td>
+							<td>{{ user.username }}</td>
+							<td>{{ user.email }}</td>
+							<td>
+								<a href="{{ path('user_show', {'id_user': user.idUser}) }}">Afficher</a>
+								<a href="{{ path('user_edit', {'id_user': user.idUser}) }}">Modifier</a>
+								<a href="{{ path('user_delete', {'id_user': user.idUser}) }}">Supprimer</a>
+							</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+
+		</div>
+		
+	</body>
+			{% endblock %}
+

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700"/>
+  <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/templatemo-style.css') }}">
+{% endblock %}
+{% block body %}
+    <h1>Créer une nouvelle réponse</h1>
+
+				{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+        {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+    <a href="{{ path('reponse_index') }}">Retour à la liste des réponses</a>
+{% endblock %}

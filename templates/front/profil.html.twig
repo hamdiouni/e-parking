@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<a  href="{{ path('user_profile') }}">
+                  <b>back</b>
+                </a>
+    <h1>Détails du véhicule</h1>
+
+    <dl>
+        <dt>Matricule :</dt>
+        <dd>{{ vehicule.matricule }}</dd>
+        <dt>Marque :</dt>
+        <dd>{{ vehicule.marque }}</dd>
+        <dt>Modèle :</dt>
+        <dd>{{ vehicule.modele }}</dd>
+        <dt>Couleur :</dt>
+        <dd>{{ vehicule.couleur }}</dd>
+    </dl>
+
+
+{% endblock %}

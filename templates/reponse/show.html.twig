@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700"/>
+  <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/templatemo-style.css') }}">
+{% endblock %}
+{% block body %}
+    <h1>Réponse n°{{ reponse.id }}</h1>
+
+    <dl>
+        <dt>Contenu :</dt>
+        <dd>{{ reponse.reponse }}</dd>
+                <dd>{{ reponse.date|date('Y-m-d H:i:s') }}
+</dd>
+
+    </dl>
+
+    <a href="{{ path('reponse_index') }}">Retour à la liste des réponses</a>
+{% endblock %}
+

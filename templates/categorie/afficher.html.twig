@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700"/>
+  <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/templatemo-style.css') }}">
+{% endblock %}
+{% block title %}Liste des catégories{% endblock %}
+
+{% block body %}
+<a  href="{{ path('welcome') }}">
+                  <b>back</b>
+                </a>
+    <h1>Liste des catégories</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Catégorie</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for categorie in categories %}
+                <tr>
+                    <td>{{ categorie.idCategorie }}</td>
+                    <td>{{ categorie.categorievoiture }}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+                							<a href="{{ path('categorie_ajouter') }}">ajouter des catégories</a>
+
+{% endblock %}

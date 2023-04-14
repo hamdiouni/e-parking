@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700"/>
+  <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/templatemo-style.css') }}">
+{% endblock %}
+{% block body %}
+    <h1>Reponses</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Contenu</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for reponse in reponses %}
+                <tr>
+                    <td>{{ reponse.id }}</td>
+                    <td>{{ reponse.reponse }}</td>
+                            <td>{{ reponse.date|date('Y-m-d H:i:s') }}</td>
+
+                    <td>
+                        <a href="{{ path('reponse_show', {'id': reponse.id}) }}">Voir</a>
+                        <a href="{{ path('reponse_edit', {'id': reponse.id}) }}">Modifier</a>
+                        <a href="{{ path('reponse_delete', {'id': reponse.id}) }}">Supprimer</a>
+
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

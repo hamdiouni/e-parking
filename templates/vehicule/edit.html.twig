@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Modifier le véhicule</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+    {{ form_end(form) }}
+
+    <a href="{{ path('vehicule_show', {'matricule': vehicule.matricule}) }}">Annuler</a>
+{% endblock %}

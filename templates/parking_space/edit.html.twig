@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700"/>
+  <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/templatemo-style.css') }}">
+{% endblock %}
+{% block title %}Edit ParkingSpace{% endblock %}
+
+{% block body %}
+    <h1>Edit ParkingSpace</h1>
+
+    {{ include('parking_space/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_parking_space_index') }}">back to list</a>
+
+    {{ include('parking_space/_delete_form.html.twig') }}
+{% endblock %}

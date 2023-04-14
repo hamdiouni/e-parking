@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700"/>
+  <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/templatemo-style.css') }}">
+{% endblock %}
+{% block body %}
+<a  href="{{ path('back') }}">
+                  <b>back</b>
+                </a>
+    <h1>Détails de l'utilisateur "{{ user.username }}"</h1>
+
+    <dl class="row">
+        <dt class="col-sm-3">ID</dt>
+        <dd class="col-sm-9">{{ user.idUser }}</dd>
+
+        <dt class="col-sm-3">Nom d'utilisateur</dt>
+        <dd class="col-sm-9">{{ user.username }}</dd>
+
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9">{{ user.email }}</dd>
+    </dl>
+
+    <a href="{{ path('user_edit', {'id_user': user.idUser}) }}" class="btn btn-primary">Modifier</a>
+                                         <a href="{{ path('user_delete', {'id_user': user.idUser}) }}">supprimer</a>
+
+
+    <a href="{{ path('user_index') }}" class="btn btn-link">Retour à la
+
+liste des utilisateurs</a>
+{% endblock %}

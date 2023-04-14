@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Choisir un abonnement{% endblock %}
+
+{% block body %}
+    <h1>Choisir un abonnement</h1>
+
+    <p>Vous avez sélectionné l'abonnement suivant :</p>
+
+    <dl>
+        <dt>{{ abonnement.nom }}</dt>
+        <dd>{{ abonnement.prix }} dt par mois</dd>
+    </dl>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}

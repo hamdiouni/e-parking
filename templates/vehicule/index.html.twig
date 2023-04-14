@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des véhicules{% endblock %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700"/>
+  <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+  <link rel="stylesheet" href="{{ asset('css/templatemo-style.css') }}">
+{% endblock %}
+{% block body %}
+<a  href="{{ path('welcome') }}">
+                  <b>back</b>
+                </a>
+    <h1>Liste des véhicules</h1>
+
+   
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Matricule</th>
+                <th>Marque</th>
+                <th>Modèle</th>
+                <th>couleur</th>
+                <th>Categorie</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for vehicule in vehicules %}
+                <tr>
+                    <td>{{ vehicule.matricule }}</td>
+                    <td>{{ vehicule.marque }}</td>
+                    <td>{{ vehicule.modele }}</td>
+                    <td>{{ vehicule.couleur }}</td>
+                    <td>{{ vehicule.categorievoiture }}</td>
+                    <td>
+                        
+{% if vehicule.matricule matches '/^[A-Za-z0-9]+$/' %}
+<a href="{{ path('vehicule_show', { 'matricule': vehicule.matricule }) }}">Voir</a>
+<a href="{{ path('vehicule_edit', { 'matricule': vehicule.matricule }) }}">Modifier</a>
+<form action="{{ path('vehicule_delete', { 'matricule': vehicule.matricule }) }}" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <button type="submit" class="btn btn-danger">Supprimer</button>
+</form>
+
+
+
+
+
+{% endif %}                    </td>
+                </tr>
+            {% else %}
+                <tr><td colspan="6">Aucun véhicule trouvé.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
